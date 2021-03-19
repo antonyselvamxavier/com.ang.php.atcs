@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "root", "ATCS");
+include_once('dbconfig/dbconfig.php');
 $info = json_decode(file_get_contents("php://input"));
 if (count($info) > 0) {
     $id     = mysqli_real_escape_string($conn, $info->id);
