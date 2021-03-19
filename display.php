@@ -1,5 +1,5 @@
 <?php
-$conn   = mysqli_connect("localhost", "root", "root", "ATCS");
+include_once('dbconfig/dbconfig.php');
 $output = array();
 $query  = "SELECT * FROM aircraft order by arcrType ASC, arcrSize ASC";
 $result = mysqli_query($conn, $query);
