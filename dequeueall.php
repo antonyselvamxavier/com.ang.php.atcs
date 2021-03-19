@@ -1,0 +1,16 @@
+<?php
+
+$conn = mysqli_connect("localhost", "root", "root", "ATCS");
+$data    = json_decode(file_get_contents("php://input"));
+if (count($data) > 0) {
+    $id    = $data->id;
+    $query = "DELETE FROM aircraft";
+    if (mysqli_query($conn, $query)) {
+        
+        echo 'Aircraft Dequeued Successfully: '.$id;
+       
+    } else {
+        echo 'Failed to dequeue Aircraft';
+    }
+}
+?>
