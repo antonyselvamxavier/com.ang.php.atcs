@@ -59,7 +59,7 @@
     </div>
 </div>
 <script src="controllers/controller.js"> 
-<script src="controllers/my.app.bootstrap.js">
+
 </script>  
 </body>  
 </html>  
